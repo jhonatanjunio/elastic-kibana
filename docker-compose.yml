@@ -35,6 +35,11 @@ services:
     depends_on:
       - elasticsearch
       
+  nginx:
+        image: yourimagename/nginx-beats
+        ports:
+            - 9000:80
+      
 volumes: 
   elasticsearch-data-volume:
     driver: local
